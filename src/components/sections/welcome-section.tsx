@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Cog, Microscope, Plus } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
+import { asset } from "@/lib/asset";
 import { homeContent } from "@/lib/content/pages";
 
 export function WelcomeSection() {
@@ -29,7 +30,7 @@ export function WelcomeSection() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex justify-center lg:justify-start">
             <Image
-              src="/images/logo.png"
+              src={asset("/images/logo.png")}
               alt="SpherEarth"
               width={420}
               height={200}

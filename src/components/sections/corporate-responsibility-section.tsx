@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
+import { asset } from "@/lib/asset";
 import { homeContent } from "@/lib/content/pages";
 
 export function CorporateResponsibilitySection() {
@@ -12,7 +13,7 @@ export function CorporateResponsibilitySection() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-[400px]">
             <Image
-              src="/images/csr-sample.webp"
+              src={asset("/images/csr-sample.webp")}
               alt="Corporate responsibility and sustainability"
               fill
               className="object-cover"

@@ -7,6 +7,7 @@ import { ChevronDown } from "lucide-react";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SocialLinks } from "@/components/ui/social-links";
+import { asset } from "@/lib/asset";
 import { siteConfig } from "@/lib/content/site";
 import { mainNavigation } from "@/lib/content/navigation";
 import type { NavItem } from "@/types/content";
@@ -87,7 +88,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex items-center justify-between container-padding py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/logo.png"
+            src={asset("/images/logo.png")}
             alt={siteConfig.shortName}
             width={180}
             height={48}

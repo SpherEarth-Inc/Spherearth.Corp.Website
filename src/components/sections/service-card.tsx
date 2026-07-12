@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Service } from "@/types/content";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -48,7 +49,7 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
             )}
           >
             <Image
-              src={image}
+              src={asset(image)}
               alt={service.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"

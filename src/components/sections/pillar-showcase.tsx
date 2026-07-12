@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 import type { CorporatePillar } from "@/types/content";
 
@@ -28,7 +29,7 @@ export function PillarShowcase({ pillars }: PillarShowcaseProps) {
                 >
                   {pillar.heroImage && (
                     <Image
-                      src={pillar.heroImage}
+                      src={asset(pillar.heroImage)}
                       alt={pillar.title}
                       fill
                       className="object-cover"

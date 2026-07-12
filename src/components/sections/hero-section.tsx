@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
+import { asset } from "@/lib/asset";
 import { homeContent } from "@/lib/content/pages";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +47,7 @@ export function HeroSection() {
           aria-hidden={index !== activeIndex}
         >
           <Image
-            src={slide.image}
+            src={asset(slide.image)}
             alt=""
             fill
             priority={index === 0}

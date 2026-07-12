@@ -6,6 +6,7 @@ import { IdentityTabs } from "@/components/sections/identity-tabs";
 import { ValuesAcronym } from "@/components/sections/values-acronym";
 import { ButtonLink } from "@/components/ui/button-link";
 import { SocialLinks } from "@/components/ui/social-links";
+import { asset } from "@/lib/asset";
 import { aboutContent } from "@/lib/content/pages";
 import { getFeaturedServices } from "@/lib/content/services";
 import { createMetadata } from "@/lib/content/site";
@@ -37,7 +38,7 @@ export default function AboutPage() {
           <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="relative order-2 aspect-[4/5] w-full overflow-hidden rounded-2xl lg:order-1 lg:sticky lg:top-28">
               <Image
-                src={corporateOverview.image}
+                src={asset(corporateOverview.image)}
                 alt="Toronto cityscape with globe sculpture"
                 fill
                 className="object-cover"
@@ -102,7 +103,7 @@ export default function AboutPage() {
 
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl lg:aspect-[5/4]">
               <Image
-                src={team.image}
+                src={asset(team.image)}
                 alt="SpherEarth team environment"
                 fill
                 className="object-cover"

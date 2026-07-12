@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { homeContent } from "@/lib/content/pages";
 
 export function LandAcknowledgment() {
@@ -10,7 +11,7 @@ export function LandAcknowledgment() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:aspect-[5/6] lg:aspect-auto lg:min-h-[480px]">
             <Image
-              src={landAcknowledgment.image}
+              src={asset(landAcknowledgment.image)}
               alt="Toronto cityscape with park and globe sculpture"
               fill
               className="object-cover"

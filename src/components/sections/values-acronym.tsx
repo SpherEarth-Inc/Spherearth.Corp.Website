@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { AcronymValue } from "@/types/content";
+import { asset } from "@/lib/asset";
 
 interface ValuesAcronymProps {
   values: AcronymValue[];
@@ -23,7 +24,7 @@ export function ValuesAcronym({
               <div className="sticky top-28 overflow-hidden rounded-2xl">
                 <div className="relative aspect-[3/4] w-full">
                   <Image
-                    src={image}
+                    src={asset(image)}
                     alt="SpherEarth workspace"
                     fill
                     className="object-cover"

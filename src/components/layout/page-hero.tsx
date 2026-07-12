@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { BreadcrumbItem } from "@/types/content";
 import { BreadcrumbNav } from "@/components/layout/breadcrumb-nav";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 interface PageHeroProps {
@@ -18,7 +19,7 @@ export function PageHero({ title, description, breadcrumb, image }: PageHeroProp
     return (
       <section className="relative isolate overflow-hidden border-b bg-brand-navy text-white">
         <Image
-          src={image}
+          src={asset(image)}
           alt=""
           fill
           priority
