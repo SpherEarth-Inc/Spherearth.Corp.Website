@@ -116,4 +116,17 @@
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
+
+  @keyframes spherearth-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spherearth-spin {
+    animation: spherearth-spin 1.1s linear infinite;
+  }
 }
