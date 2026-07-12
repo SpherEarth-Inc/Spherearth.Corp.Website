@@ -3,6 +3,8 @@ import { corporatePillars } from "@/lib/content/corporate-responsibility";
 import { services } from "@/lib/content/services";
 import { siteConfig } from "@/lib/content/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
