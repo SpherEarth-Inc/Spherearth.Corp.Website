@@ -129,4 +129,55 @@
   .animate-spherearth-spin {
     animation: spherearth-spin 1.1s linear infinite;
   }
+
+  .google-translate-widget .goog-te-gadget {
+    display: block !important;
+    width: 100% !important;
+    font-family: inherit !important;
+    color: inherit !important;
+  }
+
+  .google-translate-widget .goog-te-gadget-simple {
+    display: none !important;
+  }
+
+  .google-translate-widget .goog-te-combo {
+    display: block !important;
+    width: 100% !important;
+    height: 3.5rem !important;
+    margin: 0 0 1rem !important;
+    padding: 0 1rem !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    color: var(--foreground) !important;
+    outline: none !important;
+    appearance: auto !important;
+  }
+
+  .google-translate-widget .goog-te-gadget > span {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    white-space: nowrap !important;
+    font-size: 0.875rem !important;
+    color: var(--muted-foreground) !important;
+  }
+
+  .google-translate-widget .goog-te-gadget > span a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  .google-translate-widget .goog-te-gadget img {
+    display: inline-block !important;
+    margin: 0 !important;
+    vertical-align: middle !important;
+  }
 }

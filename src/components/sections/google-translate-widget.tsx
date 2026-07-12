@@ -45,10 +45,8 @@ export function GoogleTranslateWidget() {
   }, []);
 
   return (
-    <div className="rounded-lg border bg-card p-6">
-      <p className="mb-4 text-sm font-medium">
-        Please choose from the available languages:
-      </p>
+    <div className="google-translate-widget space-y-4">
+      <p>Please choose from the available languages:</p>
       <div id="google_translate_element" />
     </div>
   );

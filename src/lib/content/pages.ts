@@ -196,6 +196,7 @@ export const contactContent = {
 
 export const translateContent = {
   title: "Translate",
+  heroImage: "/images/translate-hero.jpg",
   intro:
     "At SpherEarth Inc. | SphèreTerre Inc., we are committed to providing accessible services to our diverse community. To assist you, our website can be translated into multiple languages using the Google Translate tool. Should you prefer additional language support, please feel free to contact us directly for assistance.",
   disclaimer:

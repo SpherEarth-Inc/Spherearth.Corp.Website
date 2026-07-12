@@ -15,19 +15,23 @@ export default function TranslatePage() {
     <>
       <PageHero
         title={translateContent.title}
-        breadcrumb={[{ label: "Translate" }]}
+        breadcrumb={[
+          { label: "SpherEarth Inc. | SphèreTerre Inc." },
+          { label: "Translate" },
+        ]}
+        image={translateContent.heroImage}
       />
 
       <section className="section-padding">
         <div className="container mx-auto container-padding">
-          <div className="mx-auto max-w-2xl space-y-8">
-            <p className="text-lg text-muted-foreground">
+          <div className="mx-auto max-w-4xl space-y-10">
+            <p className="text-base leading-relaxed text-foreground">
               {translateContent.intro}
             </p>
 
             <GoogleTranslateWidget />
 
-            <p className="rounded-lg border bg-muted/50 p-4 text-sm text-muted-foreground">
+            <p className="text-base leading-relaxed text-foreground">
               {translateContent.disclaimer}
             </p>
           </div>
