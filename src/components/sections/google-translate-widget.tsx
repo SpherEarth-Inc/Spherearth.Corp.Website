@@ -18,12 +18,33 @@ declare global {
 
 export function GoogleTranslateWidget() {
   useEffect(() => {
+    const disablePoweredByLink = () => {
+      const link = document.querySelector(
+        ".google-translate-widget .goog-te-gadget > span a"
+      );
+      if (link instanceof HTMLAnchorElement) {
+        link.removeAttribute("href");
+        link.setAttribute("aria-disabled", "true");
+        link.setAttribute("tabindex", "-1");
+      }
+    };
+
+    const container = document.getElementById("google_translate_element");
+    const observer =
+      container &&
+      new MutationObserver(() => {
+        disablePoweredByLink();
+      });
+
+    observer?.observe(container, { childList: true, subtree: true });
+
     window.googleTranslateElementInit = () => {
       if (window.google?.translate?.TranslateElement) {
         new window.google.translate.TranslateElement(
           { pageLanguage: "en", layout: 0 },
           "google_translate_element"
         );
+        disablePoweredByLink();
       }
     };
 
@@ -37,9 +58,11 @@ export function GoogleTranslateWidget() {
       document.body.appendChild(script);
     } else if (window.google?.translate?.TranslateElement) {
       window.googleTranslateElementInit?.();
+      disablePoweredByLink();
     }
 
     return () => {
+      observer?.disconnect();
       delete window.googleTranslateElementInit;
     };
   }, []);
