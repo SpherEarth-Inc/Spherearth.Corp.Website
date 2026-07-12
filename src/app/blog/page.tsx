@@ -21,13 +21,13 @@ export default function BlogPage() {
 
       <section className="section-padding">
         <div className="container mx-auto container-padding">
-          <div className="mx-auto max-w-xl">
+          <div className="mx-auto max-w-4xl">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 type="search"
                 placeholder="Search news and events..."
-                className="pl-10"
+                className="h-12 rounded-none pl-10 focus-visible:border-input focus-visible:ring-0"
                 disabled
                 aria-label="Search news and events"
               />
