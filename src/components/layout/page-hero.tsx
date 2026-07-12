@@ -1,0 +1,63 @@
+import Image from "next/image";
+import type { BreadcrumbItem } from "@/types/content";
+import { BreadcrumbNav } from "@/components/layout/breadcrumb-nav";
+import { cn } from "@/lib/utils";
+
+interface PageHeroProps {
+  title: string;
+  description?: string;
+  breadcrumb?: BreadcrumbItem[];
+  image?: string;
+}
+
+export function PageHero({ title, description, breadcrumb, image }: PageHeroProps) {
+  const crumbStyles =
+    "[&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white [&_svg]:text-white/70";
+
+  if (image) {
+    return (
+      <section className="relative isolate overflow-hidden border-b bg-brand-navy text-white">
+        <Image
+          src={image}
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+        <div className="container relative mx-auto container-padding py-20 md:py-28 lg:py-32">
+          <h1 className="text-4xl font-bold uppercase tracking-wide md:text-5xl lg:text-6xl">
+            {title}
+          </h1>
+          {breadcrumb && breadcrumb.length > 0 && (
+            <div className={cn("mt-4", crumbStyles)}>
+              <BreadcrumbNav items={breadcrumb} />
+            </div>
+          )}
+          {description && (
+            <p className="mt-4 max-w-3xl text-lg text-white/80">{description}</p>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="border-b bg-brand-navy text-white">
+      <div className="container mx-auto container-padding section-padding">
+        {breadcrumb && breadcrumb.length > 0 && (
+          <div className={crumbStyles}>
+            <BreadcrumbNav items={breadcrumb} />
+          </div>
+        )}
+        <h1 className="text-3xl font-bold uppercase tracking-wide md:text-4xl lg:text-5xl">
+          {title}
+        </h1>
+        {description && (
+          <p className="mt-4 max-w-3xl text-lg text-white/80">{description}</p>
+        )}
+      </div>
+    </section>
+  );
+}
