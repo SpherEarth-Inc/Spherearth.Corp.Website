@@ -26,7 +26,7 @@ export function PageHero({ title, description, breadcrumb, image }: PageHeroProp
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
         <div className="container relative mx-auto container-padding py-20 md:py-28 lg:py-32">
           <h1 className="text-4xl font-bold uppercase tracking-wide md:text-5xl lg:text-6xl">
             {title}

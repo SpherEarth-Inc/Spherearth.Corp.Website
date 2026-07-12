@@ -54,7 +54,7 @@ export function HeroSection() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/25" />
         </div>
       ))}
 
