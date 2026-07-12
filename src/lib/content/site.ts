@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://www.spherearth.ca",
   contact: {
     email: "info@spherearth.ca",
-    phone: "+1 647.936.2784",
+    phone: "+1 647 936 2784",
     address: "First Canadian Place, 100 King Street West, Suite 5600",
     city: "Toronto, ON M5X 1C9",
     hours: "Monday to Friday 10:00am to 5:00pm",
