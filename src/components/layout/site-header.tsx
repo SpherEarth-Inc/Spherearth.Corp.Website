@@ -62,7 +62,7 @@ function DesktopNavItem({ item }: { item: NavItem }) {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-40 w-full border-b bg-white">
       <div className="hidden bg-[#f5f5f5] text-foreground/80 md:block">
         <div className="container mx-auto flex items-center justify-between container-padding py-2 text-sm">
           <div className="flex items-center gap-6">
@@ -88,7 +88,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex items-center justify-between container-padding py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={asset("/images/logo.png")}
+            src={asset("/images/logo.webp")}
             alt={siteConfig.shortName}
             width={180}
             height={48}

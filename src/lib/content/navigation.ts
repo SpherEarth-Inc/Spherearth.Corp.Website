@@ -33,6 +33,10 @@ export const mainNavigation: NavItem[] = [
         label: "Project Management & General Consultancy",
         href: "/services/project-management-and-general-consultancy",
       },
+      {
+        label: "SpherEarth Football Academy",
+        href: "/services/spherearth-football-academy",
+      },
     ],
   },
   {

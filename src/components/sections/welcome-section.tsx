@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Cog, Microscope, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { asset } from "@/lib/asset";
 import { homeContent } from "@/lib/content/pages";
@@ -9,20 +9,20 @@ export function WelcomeSection() {
 
   return (
     <section className="relative overflow-hidden bg-white section-padding">
-      <div
-        className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 opacity-[0.06]"
+      <Image
+        src={asset("/images/welcome-bg-gears.webp")}
+        alt=""
+        width={255}
+        height={462}
+        className="pointer-events-none absolute bottom-0 left-0 h-auto w-[140px] select-none opacity-90 sm:w-[180px] md:w-[220px] lg:w-[255px]"
         aria-hidden="true"
-      >
-        <div className="flex items-center gap-6 pl-4">
-          <Cog className="size-24 text-foreground" strokeWidth={1} />
-          <Plus className="size-8 text-foreground" strokeWidth={1.5} />
-          <Cog className="size-16 text-foreground" strokeWidth={1} />
-        </div>
-      </div>
-
-      <Microscope
-        className="pointer-events-none absolute bottom-8 right-8 size-40 text-foreground opacity-[0.06] md:size-52"
-        strokeWidth={1}
+      />
+      <Image
+        src={asset("/images/welcome-bg-microscope.webp")}
+        alt=""
+        width={251}
+        height={362}
+        className="pointer-events-none absolute bottom-0 right-0 h-auto w-[130px] select-none opacity-90 sm:w-[170px] md:w-[210px] lg:w-[251px]"
         aria-hidden="true"
       />
 
@@ -30,7 +30,7 @@ export function WelcomeSection() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex justify-center lg:justify-start">
             <Image
-              src={asset("/images/logo.png")}
+              src={asset("/images/logo.webp")}
               alt="SpherEarth"
               width={420}
               height={200}

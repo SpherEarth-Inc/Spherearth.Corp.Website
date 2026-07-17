@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const MIN_VISIBLE_MS = 500;
-const FADE_OUT_MS = 350;
+const MIN_VISIBLE_MS = 400;
+const FADE_OUT_MS = 300;
 
 function SpherearthLoaderMark() {
   return (
@@ -35,29 +35,22 @@ export function PageLoader() {
   useEffect(() => {
     setVisible(true);
     setFading(false);
-
     const startedAt = Date.now();
     let fadeTimer: ReturnType<typeof setTimeout>;
     let hideTimer: ReturnType<typeof setTimeout>;
 
     const finish = () => {
-      const elapsed = Date.now() - startedAt;
-      const remaining = Math.max(0, MIN_VISIBLE_MS - elapsed);
-
+      const remaining = Math.max(0, MIN_VISIBLE_MS - (Date.now() - startedAt));
       fadeTimer = setTimeout(() => {
         setFading(true);
         hideTimer = setTimeout(() => setVisible(false), FADE_OUT_MS);
       }, remaining);
     };
 
-    if (document.readyState === "complete") {
-      finish();
-    } else {
-      window.addEventListener("load", finish, { once: true });
-    }
+    // Do not wait for window "load" — large hero images can delay it.
+    finish();
 
     return () => {
-      window.removeEventListener("load", finish);
       clearTimeout(fadeTimer);
       clearTimeout(hideTimer);
     };
@@ -71,8 +64,8 @@ export function PageLoader() {
       aria-live="polite"
       aria-label="Loading page"
       className={cn(
-        "fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-300 ease-out",
-        fading ? "pointer-events-none opacity-0" : "opacity-100"
+        "pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-300 ease-out",
+        fading ? "opacity-0" : "opacity-100"
       )}
     >
       <SpherearthLoaderMark />

@@ -33,7 +33,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative min-h-[70vh] text-white md:min-h-[80vh]"
+      className="relative min-h-[calc(100svh-4.5rem)] text-white md:min-h-[calc(100svh-6.5rem)]"
       aria-roledescription="carousel"
       aria-label="Homepage hero"
     >
@@ -58,7 +58,7 @@ export function HeroSection() {
         </div>
       ))}
 
-      <div className="relative z-10 mx-auto flex min-h-[70vh] items-center container-padding py-20 pb-24 md:min-h-[80vh] md:py-28 md:pb-32 lg:container">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-4.5rem)] items-center container-padding py-20 pb-24 md:min-h-[calc(100svh-6.5rem)] md:py-28 md:pb-32 lg:container">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold uppercase leading-tight md:text-5xl lg:text-6xl">
             {hero.title}

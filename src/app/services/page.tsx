@@ -19,7 +19,7 @@ export default function ServicesPage() {
           { label: "SpherEarth Inc. | SphèreTerre Inc." },
           { label: "Our Services" },
         ]}
-        image="/images/service-heroes/service-index-hero.avif"
+        image="/images/service-heroes/service-index-hero.webp"
       />
 
       <section className="section-padding">

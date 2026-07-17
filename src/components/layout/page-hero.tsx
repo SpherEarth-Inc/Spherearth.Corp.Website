@@ -9,9 +9,16 @@ interface PageHeroProps {
   description?: string;
   breadcrumb?: BreadcrumbItem[];
   image?: string;
+  imagePosition?: "center" | "bottom";
 }
 
-export function PageHero({ title, description, breadcrumb, image }: PageHeroProps) {
+export function PageHero({
+  title,
+  description,
+  breadcrumb,
+  image,
+  imagePosition = "center",
+}: PageHeroProps) {
   const crumbStyles =
     "[&_a]:text-white/70 [&_a:hover]:text-white [&_span]:text-white [&_svg]:text-white/70";
 
@@ -23,11 +30,14 @@ export function PageHero({ title, description, breadcrumb, image }: PageHeroProp
           alt=""
           fill
           priority
-          className="object-cover"
+          className={cn(
+            "object-cover",
+            imagePosition === "bottom" ? "object-bottom" : "object-center"
+          )}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
-        <div className="container relative mx-auto container-padding py-20 md:py-28 lg:py-32">
+        <div className="container relative mx-auto container-padding py-28 md:py-36 lg:py-[150px]">
           <h1 className="text-4xl font-bold uppercase tracking-wide md:text-5xl lg:text-6xl">
             {title}
           </h1>

@@ -16,7 +16,12 @@ export default function BlogPage() {
     <>
       <PageHero
         title={blogContent.title}
-        breadcrumb={[{ label: "News & Events" }]}
+        breadcrumb={[
+          { label: "SpherEarth Inc. | SphèreTerre Inc.", href: "/" },
+          { label: "News & Events" },
+        ]}
+        image={blogContent.heroImage}
+        imagePosition="bottom"
       />
 
       <section className="section-padding">

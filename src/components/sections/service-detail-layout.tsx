@@ -40,6 +40,19 @@ export function ServiceDetailLayout({ service }: ServiceDetailLayoutProps) {
                 {paragraph}
               </p>
             ))}
+            {service.externalUrl && (
+              <div className="pt-2">
+                <ButtonLink
+                  href={service.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-auto min-h-[48px] w-fit gap-2 rounded-[2px] px-7 py-3 text-base font-semibold bg-brand-green hover:bg-brand-green/90"
+                >
+                  {service.externalLabel ?? "Learn More"}
+                  <ArrowRight className="size-4" />
+                </ButtonLink>
+              </div>
+            )}
           </article>
 
           <aside className="space-y-8">

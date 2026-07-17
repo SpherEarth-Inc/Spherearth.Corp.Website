@@ -8,7 +8,7 @@ export const corporatePillars: CorporatePillar[] = [
       "Driving innovation and responsibility for a sustainable future.",
     description:
       "At SpherEarth Inc. | SphèreTerre Inc., sustainability is at the heart of everything we do. As a new business, we are committed to building our operations on a foundation of environmental stewardship, social responsibility, and economic sustainability. We aim to create scalable solutions that benefit our clients, communities, and the planet while fostering long-term growth and innovation.",
-    heroImage: "/images/cr-heroes/sustainability.jpg",
+    heroImage: "/images/cr-heroes/sustainability.webp",
     sections: [
       {
         title: "Environmental Responsibility",
@@ -49,7 +49,7 @@ export const corporatePillars: CorporatePillar[] = [
       "Upholding transparency, ethical practices, and long-term value creation.",
     description:
       "At SpherEarth Inc. | SphèreTerre Inc., we are dedicated to embedding Environmental, Social, and Governance (ESG) principles into our business operations and decision making processes. Our ESG commitment reflects our belief that responsible practices drive long-term value for our stakeholders, communities, and the planet. We integrate environmental stewardship, social responsibility, and strong governance into every aspect of our operations.",
-    heroImage: "/images/cr-heroes/esg.jpg",
+    heroImage: "/images/cr-heroes/esg.webp",
   },
   {
     slug: "dei-statement",
@@ -58,7 +58,7 @@ export const corporatePillars: CorporatePillar[] = [
       "Building an inclusive workplace that values every individual.",
     description:
       "At SpherEarth Inc. | SphèreTerre Inc., we celebrate diversity, promote equity, and foster inclusion in every aspect of our business. We believe that our strength lies in the variety of perspectives, experiences, and backgrounds that our team, clients, and stakeholders bring to the table. We are committed to creating an environment where everyone feels valued, respected, and empowered to contribute their best.",
-    heroImage: "/images/cr-heroes/dei.jpg",
+    heroImage: "/images/cr-heroes/dei.webp",
   },
   {
     slug: "eeo-policy",
@@ -66,7 +66,7 @@ export const corporatePillars: CorporatePillar[] = [
     summary: "Ensuring fairness and opportunity for all employees.",
     description:
       "SpherEarth Inc. | SphèreTerre Inc. is committed to fostering a workplace that promotes equal employment opportunities for all individuals. We believe that diversity and inclusion strengthen our organization, and we are dedicated to providing an environment where everyone has a fair chance to succeed, regardless of their background or identity. We prohibit discrimination in all employment practices and actively promote equitable hiring, promotion, and development opportunities.",
-    heroImage: "/images/cr-heroes/eeo.jpg",
+    heroImage: "/images/cr-heroes/eeo.webp",
   },
   {
     slug: "csr-commitment",
@@ -75,7 +75,7 @@ export const corporatePillars: CorporatePillar[] = [
       "Giving back through community engagement and impactful initiatives.",
     description:
       "At SpherEarth Inc. | SphèreTerre Inc., our Corporate Social Responsibility (CSR) philosophy is rooted in creating positive and lasting impacts on the communities we serve. As a purpose-driven organization, we prioritize initiatives that uplift the vulnerable, empower our employees to give back, and contribute to a sustainable future. We believe in making a meaningful difference beyond business operations through volunteerism, community partnerships, and charitable engagement.",
-    heroImage: "/images/cr-heroes/csr.jpg",
+    heroImage: "/images/cr-heroes/csr.webp",
   },
 ];
 

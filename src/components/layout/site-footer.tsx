@@ -12,7 +12,7 @@ export function SiteFooter() {
     <footer className="relative isolate overflow-hidden bg-[#1f1f1f] text-white">
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-3/4 opacity-70">
         <Image
-          src={asset("/images/footer-skyline.png")}
+          src={asset("/images/footer-skyline.webp")}
           alt=""
           fill
           className="object-cover object-bottom"
@@ -25,7 +25,7 @@ export function SiteFooter() {
           <div className="space-y-5">
             <div className="inline-flex rounded-md bg-white p-3">
               <Image
-                src={asset("/images/logo.png")}
+                src={asset("/images/logo.webp")}
                 alt={siteConfig.shortName}
                 width={180}
                 height={48}
@@ -100,7 +100,7 @@ export function SiteFooter() {
       <div className="relative isolate overflow-hidden bg-brand-green">
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-50">
           <Image
-            src={asset("/images/footer-wave.png")}
+            src={asset("/images/footer-wave.webp")}
             alt=""
             fill
             className="object-cover"

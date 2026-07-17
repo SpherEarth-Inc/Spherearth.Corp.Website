@@ -18,6 +18,9 @@ export interface Service {
   featured?: boolean;
   image?: string;
   heroImage?: string;
+  /** Optional external site CTA shown on the service detail page. */
+  externalUrl?: string;
+  externalLabel?: string;
 }
 
 export interface CorporatePillar {

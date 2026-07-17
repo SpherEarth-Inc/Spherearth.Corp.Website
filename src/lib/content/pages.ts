@@ -9,14 +9,14 @@ export const homeContent = {
     title: "SpherEarth Inc. / SphèreTerre Inc.",
     slides: [
       {
-        image: "/images/home-hero-1.jpg",
+        image: "/images/home-hero-1.webp",
         description:
           "We provide holistic solutions across multiple sectors.",
         ctaLabel: "Learn More About Us",
         ctaHref: "/about-us",
       },
       {
-        image: "/images/home-hero-2.jpg",
+        image: "/images/home-hero-2.webp",
         description:
           "Explore our services and join us in shaping a better future. We offer a comprehensive range of services designed to drive sustainable growth, operational efficiency, and community impact.",
         ctaLabel: "Explore Our Services",
@@ -32,7 +32,7 @@ export const homeContent = {
   },
   landAcknowledgment: {
     title: "Land Acknowledgment",
-    image: "/images/acknowlegdment.jpg",
+    image: "/images/acknowlegdment.webp",
     paragraphs: [
       "SpherEarth Inc. / SphèreTerre Inc. acknowledges the ancestral lands of Indigenous peoples across Ontario, recognizing 46 treaties and agreements. We thank First Nations, Métis, and Inuit communities for their enduring stewardship. Our Toronto office sits on Mississaugas of the Credit, Michi Saagig, Anishnabeg territory, historically home to Chippewa, Haudenosaunee, and Wendat peoples. We commit to understanding this land's history, respecting inherent and treaty rights, and collaborating with Indigenous communities as colleagues, learners, and allies.",
       "By acknowledging these territories, we move towards reconciliation and a more inclusive future.",
@@ -47,10 +47,10 @@ export const homeContent = {
 
 export const aboutContent = {
   title: "About Us",
-  heroImage: "/images/about-hero-1.jpg",
+  heroImage: "/images/about-hero-1.webp",
   corporateOverview: {
     eyebrow: "Corporate Overview",
-    image: "/images/acknowlegdment.jpg",
+    image: "/images/acknowlegdment.webp",
     paragraphs: [
       "SpherEarth Inc. / SphèreTerre Inc. is a Private Corporation duly registered and incorporated with Corporations Canada and in the Province of Ontario, with operations in the City of Toronto, in the Province of Ontario, Canada. At SpherEarth Inc. / SphèreTerre Inc., our Corporate Mantra is \"... scaling sustainable synergies ...\" \"Scaling\" – because we believe in \"Growth\". \"Sustainable\" – a pointer to our core values better detailed in our Corporate Responsibility Commitment, Statements and Policies. \"Synergies\" – because we believe in healthy collaborations, co-operation and partnership as against unhealthy competitive practises. Most human and societal problems and challenges stem from an absence of positive Synergies. At SpherEarth Inc. / SphèreTerre Inc. we know and we believe we can make the Earth a better place for all.",
       "Our bilingual name, SpherEarth Inc. / SphèreTerre Inc., embodies our dedication to inclusivity, cultural diversity, and environmental sustainability. By uniting 'SpherEarth' – symbolizing global interconnectedness – with 'SphèreTerre' – paying tribute to Canada's French heritage – we bridge cultural divides and foster eco friendly practices, reflecting our commitment to a harmonious and sustainable future.",
@@ -71,7 +71,7 @@ export const aboutContent = {
   ],
   values: {
     eyebrow: "Our Core Values",
-    image: "/images/core-values.png",
+    image: "/images/core-values.webp",
     intro:
       "At SpherEarth Inc. | SphèreTerre Inc., our values are reflected through the SPHEREARTH acronym, guiding our commitment to sustainability, inclusivity, and excellence.",
   },
@@ -100,7 +100,7 @@ export const aboutContent = {
 
 export const whyChooseContent = {
   title: "Why Choose Us?",
-  heroImage: "/images/why-choose-us-hero.png",
+  heroImage: "/images/why-choose-us-hero.webp",
   intro:
     "At SpherEarth Inc. | SphèreTerre Inc., we stand out for our unwavering commitment to sustainability, innovation, and collaboration. Here's why choosing us is the best choice for your business or organization:",
   reasons: [
@@ -179,7 +179,7 @@ export const careersContent = {
 
 export const contactContent = {
   title: "Contact Us",
-  heroImage: "/images/contact-hero.png",
+  heroImage: "/images/contact-hero.webp",
   intro:
     "At SpherEarth Inc. | SphèreTerre Inc., we value open communication and are committed to providing the best support and services to our clients, partners, and stakeholders. Whether you have questions, need assistance, or are looking to collaborate, we're here to help.",
   locationLines: [
@@ -196,7 +196,7 @@ export const contactContent = {
 
 export const translateContent = {
   title: "Translate",
-  heroImage: "/images/translate-hero.jpg",
+  heroImage: "/images/translate-hero.webp",
   intro:
     "At SpherEarth Inc. | SphèreTerre Inc., we are committed to providing accessible services to our diverse community. To assist you, our website can be translated into multiple languages using the Google Translate tool. Should you prefer additional language support, please feel free to contact us directly for assistance.",
   disclaimer:
@@ -205,6 +205,7 @@ export const translateContent = {
 
 export const blogContent = {
   title: "News & Events",
+  heroImage: "/images/blog-hero.webp",
   emptyMessage: "No posts yet. Check back soon for the latest news and events from SpherEarth Inc.",
 };
 

@@ -19,7 +19,7 @@ export default function CareersPage() {
           { label: "SpherEarth Inc. | SphèreTerre Inc." },
           { label: "Careers" },
         ]}
-        image="/images/careers-hero.png"
+        image="/images/careers-hero.webp"
       />
 
       <section className="section-padding">

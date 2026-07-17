@@ -1,9 +1,12 @@
+import type { Metadata } from "next";
+
 export const siteConfig = {
   name: "SpherEarth Inc. | SphèreTerre Inc.",
   shortName: "SpherEarth",
   description:
     "SpherEarth Inc. / SphèreTerre Inc. provides holistic solutions across multiple sectors. Explore our services and join us in shaping a better future.",
   url: "https://www.spherearth.ca",
+  ogImage: "/images/og-image.png",
   contact: {
     email: "info@spherearth.ca",
     phone: "+1 647 936 2784",
@@ -57,20 +60,42 @@ export function createMetadata({
   title: string;
   description?: string;
   path?: string;
-}) {
+}): Metadata {
   const fullTitle =
     title === "Home" ? siteConfig.name : `${title} – ${siteConfig.name}`;
+  const pageDescription = description ?? siteConfig.description;
+  const pageUrl = `${siteConfig.url}${path}`;
+  const ogImageUrl = `${siteConfig.url}${siteConfig.ogImage}`;
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title: fullTitle,
-    description: description ?? siteConfig.description,
+    description: pageDescription,
+    icons: {
+      icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    },
     openGraph: {
       title: fullTitle,
-      description: description ?? siteConfig.description,
-      url: `${siteConfig.url}${path}`,
+      description: pageDescription,
+      url: pageUrl,
       siteName: siteConfig.shortName,
       locale: "en_CA",
-      type: "website" as const,
+      type: "website",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description: pageDescription,
+      images: [ogImageUrl],
     },
   };
 }
