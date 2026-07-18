@@ -96,7 +96,7 @@ export const services: Service[] = [
     description:
       "SpherEarth Football Academy is a premium youth football development academy built in Toronto and designed for ambitious young athletes and families who believe football can open doors to lifelong opportunities. Our approach goes beyond training. We combine elite coaching, structured player development, character formation, leadership, academic balance, and global pathways to help young athletes become confident players, responsible leaders, and well-rounded individuals. At SpherEarth Inc. | SphèreTerre Inc., we believe every young athlete deserves access to structured coaching, positive mentorship, disciplined development, and opportunities that extend far beyond the football pitch. Our mission is to help players reach their highest potential while developing the confidence, resilience, discipline, and leadership skills that prepare them for success in sport, education, and life. Visit the Academy website to explore programs, admissions, scholarships, and how to get involved as a parent, partner, or sponsor.",
     heroImage: "/images/service-heroes/football-academy.webp",
-    externalUrl: "https://academy.spherearth.ca",
+    externalUrl: "https://football.spherearth.ca",
     externalLabel: "Visit Football Academy",
   },
 ];
