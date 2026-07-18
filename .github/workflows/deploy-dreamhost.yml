@@ -58,12 +58,22 @@ jobs:
             */) ;;
             *) REMOTE="${REMOTE}/" ;;
           esac
-          # Upload new build and delete anything on the server that is no longer in out/
+          # 1) Upload new build (parallel).
+          # 2) Best-effort wipe leftover WordPress trees (permissions / races must not fail the job).
+          # 3) Single-threaded --delete for stale Next assets (parallel rm races → "No such file").
           lftp -u "$SFTP_USERNAME","$SFTP_PASSWORD" "sftp://$SFTP_SERVER" <<EOF
           set sftp:connect-program "ssh -a -x -o StrictHostKeyChecking=no"
           set net:max-retries 2
           set net:timeout 30
-          mirror -R --delete --parallel=4 --verbose ./out/ $REMOTE
+          mirror -R --parallel=4 --verbose ./out/ $REMOTE
+          set cmd:fail-exit false
+          cd $REMOTE
+          rm -rf wp-content
+          rm -rf wp-includes
+          rm -rf wp-admin
+          rm -f wp-*.php xmlrpc.php license.txt readme.html
+          set cmd:fail-exit true
+          mirror -R --delete --parallel=1 --verbose ./out/ $REMOTE
           quit
           EOF
 
