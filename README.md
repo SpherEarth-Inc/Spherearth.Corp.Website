@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SpherEarth Inc. | SphèreTerre Inc.
 
-## Getting Started
+Corporate website for [SpherEarth Inc. | SphèreTerre Inc.](https://www.spherearth.ca) — a Canadian company offering holistic solutions across environmental services, logistics, project finance, media & publishing, food & agriculture, recruitment, consultancy, and SpherEarth Football Academy.
 
-First, run the development server:
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router, static export)
+- React 19
+- TypeScript
+- Tailwind CSS
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # static export to out/
+npm run lint
+npm run images:webp   # convert public images to WebP
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Site areas
 
-## Learn More
+- Home, About Us, Why Choose Us
+- Our Services (including SpherEarth Football Academy)
+- Corporate Responsibility
+- Careers, News & Events, Contact, Translate
 
-To learn more about Next.js, take a look at the following resources:
+Content lives under `src/lib/content/`. Shared layout and section components are in `src/components/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site is built as a static export and deployed to DreamHost on pushes to `main` via GitHub Actions (`.github/workflows/deploy-dreamhost.yml`).
 
-## Deploy on Vercel
+Required Actions secrets:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `DREAMHOST_SFTP_SERVER`
+- `DREAMHOST_SFTP_USERNAME`
+- `DREAMHOST_SFTP_PASSWORD`
+- `DREAMHOST_SFTP_REMOTE_PATH` — web root for `www.spherearth.ca`

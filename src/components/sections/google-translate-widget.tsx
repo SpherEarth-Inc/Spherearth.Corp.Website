@@ -30,13 +30,15 @@ export function GoogleTranslateWidget() {
     };
 
     const container = document.getElementById("google_translate_element");
-    const observer =
-      container &&
-      new MutationObserver(() => {
-        disablePoweredByLink();
-      });
+    const observer = container
+      ? new MutationObserver(() => {
+          disablePoweredByLink();
+        })
+      : null;
 
-    observer?.observe(container, { childList: true, subtree: true });
+    if (container && observer) {
+      observer.observe(container, { childList: true, subtree: true });
+    }
 
     window.googleTranslateElementInit = () => {
       if (window.google?.translate?.TranslateElement) {
