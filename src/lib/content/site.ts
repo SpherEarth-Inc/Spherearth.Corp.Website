@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "SpherEarth",
   description:
     "SpherEarth Inc. / SphèreTerre Inc. provides holistic solutions across multiple sectors. Explore our services and join us in shaping a better future.",
-  url: "https://www.spherearth.ca",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.spherearth.ca",
   ogImage: "/images/og-image.png",
   contact: {
     email: "info@spherearth.ca",
