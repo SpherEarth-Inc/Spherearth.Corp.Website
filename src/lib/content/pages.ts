@@ -9,6 +9,13 @@ export const homeContent = {
     title: "SpherEarth Inc. / SphèreTerre Inc.",
     slides: [
       {
+        image: "/images/service-heroes/football-academy.webp",
+        description:
+          "SpherEarth Football Academy — premium youth football development, built in Toronto and designed for the world.",
+        ctaLabel: "Visit Football Academy",
+        ctaHref: "https://football.spherearth.ca",
+      },
+      {
         image: "/images/home-hero-1.webp",
         description:
           "We provide holistic solutions across multiple sectors.",
